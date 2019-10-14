@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>jquery-countdown plugin test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <!--<link href="css/media.css" rel="stylesheet" type="text/css" />-->
+    <script>
+
+       $(function(){
+          $(".digits").countdown({
+
+            format: "ss",
+            startTime: "11",
+            digitImages: 6,
+            digitWidth: 67,
+            digitHeight: 90,
+            stepTime: 60,
+            timerEnd: function() { 
+              //window.location.href='estadisticaVotacion.php?votacion=9';
+              //alert("culmino");
+            },
+            image: "img/digits.png",
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <h1>Cuenta regresiva</h1>
+    <small>cambiar la ruta de img y en el siguiente link viene ejemplos</small>
+    <h3><a href="https://github.com/Reflejo/jquery-countdown">Link</a></h3>
+    <a href="https://github.com/Reflejo/jquery-countdown"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <div class="wrapper">
+      <div class="cell">
+        <div id="holder">
+          <div class="digits"></div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
